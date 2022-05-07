@@ -19,7 +19,7 @@ jobs:
           dst: gitee/h7ml
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          # static_list: "h7ml"
+          white_list: "amis-admin-vue" # 只同步amis-admin-vue
           force_update: true
           account_type: user
           clone_style: ssh
