@@ -40,6 +40,11 @@
                                 "label": "所有模式展示",
                                 "url": "/form/mode",
                                 "schemaApi": "get:/pages/mode.json"
+                            },
+                            {
+                                "label": "所有类型汇总",
+                                "url": "/form/full",
+                                "schemaApi": "get:/pages/full.json"
                             }
                         ]
                     },
