@@ -156,11 +156,54 @@
                     },
                     {
                         "label": "增删改查",
-                        "schema": {
-                            "type": "page",
-                            "title": "页面C",
-                            "body": "页面C"
-                        }
+                        "url": "crud",
+                        "children": [
+                            {
+                                "label": "表格模式",
+                                "url": "/crud/table",
+                                "schemaApi": "get:/pages/crud-table.json"
+                            },
+                            {
+                                "label": "表格高度自适应",
+                                "url": "/crud/auto-fill",
+                                "schemaApi": "get:/pages/crud-auto-fill.json"
+                            },
+                            {
+                                "label": "卡片模式",
+                                "url": "/crud/grid",
+                                "schemaApi": "get:/pages/crud-grid.json"
+                            },
+                            {
+                                "label": "列表模式",
+                                "url": "/crud/list",
+                                "schemaApi": "get:/pages/crud-list.json"
+                            },
+                            {
+                                "label": "加载更多模式",
+                                "url": "/crud/load-more",
+                                "schemaApi": "get:/pages/crud-load-more.json"
+                            },
+                            {
+                                "label": "操作交互显示",
+                                "url": "/crud/item-actions",
+                                "schemaApi": "get:/pages/crud-item-actions.json"
+                            },
+                            {
+                                "label": "列表型汇总",
+                                "url": "/crud/columns",
+                                "schemaApi": "get:/pages/crud-columns.json"
+                            },
+                            {
+                                "label": "可折叠",
+                                "url": "/crud/footable",
+                                "schemaApi": "get:/pages/crud-footable.json"
+                            },
+                            {
+                                "label": "嵌套",
+                                "url": "/crud/nested",
+                                "schemaApi": "get:/pages/crud-nested.json"
+                            }
+                        ]
                     },
                     {
                         "label": "弹框",
