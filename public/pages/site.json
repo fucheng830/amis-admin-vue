@@ -6,51 +6,35 @@
       {
         "label": "Home",
         "url": "/",
-        "redirect": "/index/1"
+        "redirect": "/index"
       },
       {
         "label": "示例",
         "children": [
           {
-            "label": "页面A",
+            "label": "页面",
             "url": "index",
-            "schema": {
-              "type": "page",
-              "title": "页面A",
-              "body": "页面A"
-            },
+            "schemaApi": "get:/pages/start.json",
             "children": [
               {
-                "label": "页面A-1",
-                "url": "1",
-                "schema": {
-                  "type": "page",
-                  "title": "页面A-1",
-                  "body": "页面A-1"
-                }
+                "label": "简单页面",
+                "url": "/index",
+                "schemaApi": "get:/pages/start.json"
               },
               {
-                "label": "页面A-2",
-                "url": "2",
-                "schema": {
-                  "type": "page",
-                  "title": "页面A-2",
-                  "body": "页面A-2"
-                }
+                "label": "初始化报错",
+                "url": "pages/error",
+                "schemaApi": "get:/pages/error.json"
               },
               {
-                "label": "页面A-3",
-                "url": "3",
-                "schema": {
-                  "type": "page",
-                  "title": "页面A-3",
-                  "body": "页面A-3"
-                }
+                "label": "表单页面",
+                "url": "pages/form",
+                "schemaApi": "get:/pages/form.json"
               }
             ]
           },
           {
-            "label": "页面B",
+            "label": "表单",
             "schema": {
               "type": "page",
               "title": "页面B",
@@ -58,7 +42,7 @@
             }
           },
           {
-            "label": "页面C",
+            "label": "增删改查",
             "schema": {
               "type": "page",
               "title": "页面C",
@@ -66,7 +50,7 @@
             }
           },
           {
-            "label": "列表示例",
+            "label": "弹框",
             "url": "/crud",
             "rewrite": "/crud/list",
             "icon": "fa fa-cube",
@@ -94,6 +78,134 @@
                 "schemaApi": "get:/pages/crud-edit.json"
               }
             ]
+          },
+          {
+            "label": "选项卡",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "联动",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "事件动作机制",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "动态加载",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "主题编辑器",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "向导",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "排版",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "图表",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "Eahcrts 编辑器",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "轮播图",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "音频",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "视频",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "异步任务",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "IFrame",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "SDK",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
+          },
+          {
+            "label": "App多页应用",
+            "schema": {
+              "type": "page",
+              "title": "页面B",
+              "body": "页面B"
+            }
           }
         ]
       },

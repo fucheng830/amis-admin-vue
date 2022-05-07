@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import { render as renderSchema } from "amis";
+import
+{ render as renderSchema } from "amis";
 import copy from 'copy-to-clipboard';
 import ReactDOM from "react-dom";
 import * as qs from 'qs';

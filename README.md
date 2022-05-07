@@ -1,4 +1,4 @@
-# amis-admin-demo-vue
+# amis-demo-vue
 
 基于 [amis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
 这是基于官方应用模板[amis-admin](https://github.com/aisuda/amis-admin)的vue实现版本。
