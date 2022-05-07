@@ -35,6 +35,7 @@
                     },
                     {
                         "label": "表单",
+                        "url": "form",
                         "children": [
                             {
                                 "label": "所有模式展示",
@@ -53,102 +54,102 @@
                             },
                             {
                                 "label": "输入提示",
-                                "url": "pages/hint",
+                                "url": "/pages/hint",
                                 "schemaApi": "get:/pages/hint.json"
                             },
                             {
                                 "label": "Fieldset",
-                                "url": "pages/fieldset",
+                                "url": "/pages/fieldset",
                                 "schemaApi": "get:/pages/fieldset.json"
                             },
                             {
                                 "label": "Tabs",
-                                "url": "pages/tabs",
+                                "url": "/pages/tabs",
                                 "schemaApi": "get:/pages/tabs.json"
                             },
                             {
                                 "label": "FieldSet Taabs组合",
-                                "url": "pages/fields-tabs",
+                                "url": "/pages/fields-tabs",
                                 "schemaApi": "get:/pages/fields-tabs.json"
                             },
                             {
                                 "label": "动态数据",
-                                "url": "pages/fremote",
+                                "url": "/pages/fremote",
                                 "schemaApi": "get:/pages/remote.json"
                             },
                             {
                                 "label": "显隐状态联动",
-                                "url": "pages/reaction",
+                                "url": "/pages/reaction",
                                 "schemaApi": "get:/pages/reaction.json"
                             },
                             {
                                 "label": "表单验证",
-                                "url": "pages/validation",
+                                "url": "/pages/validation",
                                 "schemaApi": "get:/pages/validation.json"
                             },
                             {
                                 "label": "组合类型",
-                                "url": "pages/combo",
+                                "url": "/pages/combo",
                                 "schemaApi": "get:/pages/combo.json"
                             },
                             {
                                 "label": "穿梭器",
-                                "url": "pages/transfer",
+                                "url": "/pages/transfer",
                                 "schemaApi": "get:/pages/transfer.json"
                             },
                             {
                                 "label": "多功能选择器",
-                                "url": "pages/picker",
+                                "url": "/pages/picker",
                                 "schemaApi": "get:/pages/picker.json"
                             },
                             {
                                 "label": "子表单",
-                                "url": "pages/sub-form",
+                                "url": "/pages/sub-form",
                                 "schemaApi": "get:/pages/sub-form.json"
                             },
                             {
                                 "label": "富文本",
-                                "url": "pages/rich-text",
+                                "url": "/pages/rich-text",
                                 "schemaApi": "get:/pages/rich-text.json"
                             },
                             {
                                 "label": "代码编辑器",
-                                "url": "pages/ide",
+                                "url": "/pages/ide",
                                 "schemaApi": "get:/pages/ide.json"
                             },
                             {
                                 "label": "自定义组件",
-                                "url": "pages/custom",
+                                "url": "/pages/custom",
                                 "schemaApi": "get:/pages/custom.json"
                             },
                             {
                                 "label": "表格编辑",
-                                "url": "pages/table",
+                                "url": "/pages/table",
                                 "schemaApi": "get:/pages/table.json"
                             },
                             {
                                 "label": "公式示例",
-                                "url": "pages/formula",
+                                "url": "/pages/formula",
                                 "schemaApi": "get:/pages/formula.json"
                             },
                             {
                                 "label": "条件组合",
-                                "url": "pages/condition-builder",
+                                "url": "/pages/condition-builder",
                                 "schemaApi": "get:/pages/condition-builder.json"
                             },
                             {
                                 "label": "引用",
-                                "url": "pages/definitions",
+                                "url": "/pages/definitions",
                                 "schemaApi": "get:/pages/definitions.json"
                             },
                             {
                                 "label": "样式编辑",
-                                "url": "pages/style-builder",
+                                "url": "/pages/style-builder",
                                 "schemaApi": "get:/pages/style-builder.json"
                             },
                             {
                                 "label": "锚点导航",
-                                "url": "pages/anchor-nav",
+                                "url": "/pages/anchor-nav",
                                 "schemaApi": "get:/pages/anchor-nav.json"
                             }
                         ]
