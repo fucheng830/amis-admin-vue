@@ -85,11 +85,11 @@ jobs:
           wget https://raw.staticdn.net/h7ml/amis-admin-vue/17bc54a0ec1303e47fb023cc9faaac6d4b3cec27/vue.config.js
           pnpm build
       - name: Deploy to github gh-pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: JamesIves/github-pages-deploy-action@v4.1.1
         with:
-          repository-name: h7ml/amis-admin-vue
+#          repository-name: h7ml/amis-admin-vue
           branch: gh-pages
-          commit-message: "deploy: :rocket: ${{ github.repository }}@${{ github.sha }}"
+#          commit-message: "deploy: :rocket: ${{ github.repository }}@${{ github.sha }}"
           folder: dist
 #          token: ${{ secrets.ACCESS_TOKEN }}
 #      - name: Deploy to Netlify  🚀
