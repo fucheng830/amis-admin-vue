@@ -9,6 +9,21 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/h7ml
+          dst: gitee/h7ml
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          # static_list: "h7ml"
+          force_update: true
+          account_type: user
+          clone_style: ssh
+          debug: true
   build:
     name: build 🚀
     runs-on: ubuntu-latest
@@ -38,6 +53,7 @@ jobs:
       - name: Pnpm script 🚀
         run: |
           pnpm build
+    needs: sync
   deploy:
     name: deploy 🚀
     runs-on: ubuntu-latest
@@ -69,7 +85,7 @@ jobs:
           wget https://raw.staticdn.net/h7ml/amis-admin-vue/17bc54a0ec1303e47fb023cc9faaac6d4b3cec27/vue.config.js
           pnpm build
       - name: Deploy to github gh-pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.0.0
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           repository-name: h7ml/amis-admin-vue
           branch: gh-pages
