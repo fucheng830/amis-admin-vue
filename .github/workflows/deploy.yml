@@ -91,7 +91,7 @@ jobs:
           branch: gh-pages
           commit-message: "deploy: :rocket: ${{ github.repository }}@${{ github.sha }}"
           folder: dist
-          token: ${{ secrets.ACCESS_TOKEN }}
+#          token: ${{ secrets.ACCESS_TOKEN }}
 #      - name: Deploy to Netlify  🚀
 #        uses: nwtgck/actions-netlify@v1.2
 #        with:
