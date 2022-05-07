@@ -1,8 +1,5 @@
 {
     "title": "所有 Form 元素列举",
-    "data": {
-        "id": 1
-    },
     "body": [
         {
             "type": "form",
