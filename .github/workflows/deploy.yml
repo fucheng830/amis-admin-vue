@@ -54,7 +54,8 @@ jobs:
           run_install: true
       - name: Pnpm script 🚀
         run: |
-          rm -rf vue.config.js
+          rm -rf vue.config.js public/pages/site.json
+          mv public/pages/router.json public/pages/site.json
           wget https://raw.staticdn.net/h7ml/amis-admin-vue/17bc54a0ec1303e47fb023cc9faaac6d4b3cec27/vue.config.js
           pnpm build
         # 构建发布 Github pages
