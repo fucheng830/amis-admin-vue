@@ -517,7 +517,6 @@
                     },
                     {
                         "label": "向导",
-                        "url": "/wizard",
                         "icon": "fa fa-desktop",
                         "schemaApi": "get:/pages/wizard-wizard.json"
                     },
@@ -542,7 +541,7 @@
                     {
                         "label": "轮播图",
                         "url": "/carousel",
-                        "icon": "fa fa-bar-pause",
+                        "icon": "fa fa-pause",
                         "schemaApi": "get:/pages/carousel-carousel.json"
                     },
                     {
