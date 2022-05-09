@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import AmisDemo from './components/amis-demo/AmisDemo.vue'
+import AmisDemo from './components/amis-admin/AmisDemo.vue'
 import { ReactInVue } from 'vuera'
 import {ToastComponent, AlertComponent} from 'amis';
 
