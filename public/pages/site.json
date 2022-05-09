@@ -14,6 +14,7 @@
                     {
                         "label": "页面",
                         "url": "index",
+                        "icon": "fa fa-th",
                         "schemaApi": "get:/pages/start.json",
                         "children": [
                             {
@@ -36,6 +37,7 @@
                     {
                         "label": "表单",
                         "url": "form",
+                        "icon": "fa fa-list-alt",
                         "children": [
                             {
                                 "label": "所有模式展示",
