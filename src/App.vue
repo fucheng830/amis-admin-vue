@@ -1,20 +1,20 @@
 <template>
   <div id="app" class="app-wrapper">
-    <AmisDemo />
+    <AmisView />
     <Toast key="toast" position="top-right" theme="default"/>
     <Alert key="alert" theme="default"/>
   </div>
 </template>
 
 <script>
-import AmisDemo from './components/amis-admin/AmisDemo.vue'
+import AmisView from './components/amisAdmin/AmisView.vue'
 import { ReactInVue } from 'vuera'
 import {ToastComponent, AlertComponent} from 'amis';
 
 export default {
   name: 'App',
   components: {
-    AmisDemo,
+    AmisView,
     Toast: ReactInVue(ToastComponent),
     Alert: ReactInVue(AlertComponent)
   },
