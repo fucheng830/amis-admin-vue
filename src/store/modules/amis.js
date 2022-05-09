@@ -1,7 +1,7 @@
 const state = () => ({
   config: {},
   enableAMISDebug: false,
-  theme: "antd",
+  theme: "default",
 });
 const getters = {
   config: (state) => state.config,

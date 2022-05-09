@@ -4,7 +4,7 @@
 
 <script>
 // import "amis/lib/themes/default.css";
-import "amis/lib/themes/antd.css";
+// import "amis/lib/themes/antd.css";
 // import "amis/lib/themes/cxd.css";
 import { render as renderSchema } from "amis";
 import copy from "copy-to-clipboard";
@@ -13,36 +13,36 @@ import * as qs from "qs";
 import { toast, alert, confirm } from "amis";
 import axios from "axios";
 import { mapGetters } from "vuex";
+
 export default {
   props: {
     schema: {
-      type: Object,
+      type: Object
     },
     updateLocation: {
-      type: Function,
+      type: Function
     },
     onAction: {
-      type: Function,
-    },
+      type: Function
+    }
   },
   computed: {
     ...mapGetters({
-      theme: "amis/theme",
-    }),
+      theme: "amis/theme"
+    })
   },
   data() {
     return {};
   },
-
   mounted() {
-    console.error(this.theme)
+    console.error(this.theme);
     this.initEnv();
     ReactDOM.render(
       renderSchema(
         this.schema,
         {
           onAction: this.onAction || this.handleAction,
-          theme: this.theme,
+          theme: this.theme
         },
         this.env
       ),
@@ -123,7 +123,7 @@ export default {
             showClose: true,
             message: msg,
             duration: 2000,
-            type: type,
+            type: type
           });
           console.log("[notify]", type, msg, toast);
         },
@@ -131,10 +131,10 @@ export default {
         copy: (contents, options = {}) => {
           const ret = copy(contents, options);
           ret &&
-            (!options || options.shutup !== true) &&
-            toast.info("内容已拷贝到剪切板");
+          (!options || options.shutup !== true) &&
+          toast.info("内容已拷贝到剪切板");
           return ret;
-        },
+        }
       };
     },
 
@@ -168,8 +168,8 @@ export default {
       let pathname = ~idx
         ? to.substring(0, idx)
         : ~idx2
-        ? to.substring(0, idx2)
-        : to;
+          ? to.substring(0, idx2)
+          : to;
       const search = ~idx ? to.substring(idx, ~idx2 ? idx2 : undefined) : "";
       const hash = ~idx2 ? to.substring(idx2) : "";
       if (!pathname) {
@@ -188,8 +188,8 @@ export default {
         pathname = paths.concat(pathname).join("/");
       }
       return pathname + search + hash;
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
