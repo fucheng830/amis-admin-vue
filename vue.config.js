@@ -48,7 +48,7 @@ module.exports = {
         chunks: 'all',
         cacheGroups: {
           chunk: {
-            name: 'vab-chunk',
+            name: 'amis-chunk',
             test: /[\\/]node_modules[\\/]/,
             minSize: 131072,
             maxSize: 524288,
