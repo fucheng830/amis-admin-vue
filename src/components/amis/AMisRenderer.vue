@@ -16,18 +16,18 @@ import axios from "axios";
 export default {
   props: {
     schema: {
-      type: Object,
+      type: Object
     },
     updateLocation: {
-      type: Function,
+      type: Function
     },
     onAction: {
-      type: Function,
-    },
+      type: Function
+    }
   },
   data() {
     return {
-      theme: "antd",
+      theme: "default"
     };
   },
 
@@ -38,7 +38,7 @@ export default {
         this.schema,
         {
           onAction: this.onAction || this.handleAction,
-          theme: this.theme,
+          theme: this.theme
         },
         this.env
       ),
@@ -48,7 +48,7 @@ export default {
 
   methods: {
     initEnv() {
-      window.enableAMISDebug = true
+      window.enableAMISDebug = true;
       this.env = {
         enableAMISDebug: true,
         session: "global",
@@ -115,16 +115,22 @@ export default {
           toast[type]
             ? toast[type](msg, type === "error" ? "系统错误" : "系统消息")
             : console.warn("[Notify]", type, msg);
-          console.log("[notify]", type, msg);
+          this.$message({
+            showClose: true,
+            message: msg,
+            duration: 2000,
+            type: type
+          });
+          console.log("[notify]", type, msg, toast);
         },
         confirm,
         copy: (contents, options = {}) => {
           const ret = copy(contents, options);
           ret &&
-            (!options || options.shutup !== true) &&
-            toast.info("内容已拷贝到剪切板");
+          (!options || options.shutup !== true) &&
+          toast.info("内容已拷贝到剪切板");
           return ret;
-        },
+        }
       };
     },
 
@@ -132,7 +138,10 @@ export default {
       if (location === "goBack") {
         return this.$router.go(-1);
       }
-      this.$router[replace ? "replace" : "push"](this.normalizeLink(location));
+      if (replace)
+        this.$router[replace ? "replace" : "push"](
+          this.normalizeLink(location)
+        );
     },
 
     handleAction(e, action) {
@@ -155,8 +164,8 @@ export default {
       let pathname = ~idx
         ? to.substring(0, idx)
         : ~idx2
-        ? to.substring(0, idx2)
-        : to;
+          ? to.substring(0, idx2)
+          : to;
       const search = ~idx ? to.substring(idx, ~idx2 ? idx2 : undefined) : "";
       const hash = ~idx2 ? to.substring(idx2) : "";
       if (!pathname) {
@@ -175,8 +184,8 @@ export default {
         pathname = paths.concat(pathname).join("/");
       }
       return pathname + search + hash;
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
