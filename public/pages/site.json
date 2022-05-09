@@ -159,6 +159,7 @@
                     {
                         "label": "增删改查",
                         "url": "crud",
+                        "icon": "fa fa-table",
                         "children": [
                             {
                                 "label": "表格模式",
@@ -275,6 +276,7 @@
                     {
                         "label": "弹框",
                         "url": "/dialog",
+                        "icon": "fa fa-bomb",
                         "children": [
                             {
                                 "label": "对话框",
@@ -291,6 +293,7 @@
                     {
                         "label": "选项卡",
                         "url": "/tabs",
+                        "icon": "fa fa-clone",
                         "children": [
                             {
                                 "label": "选项卡",
@@ -327,6 +330,7 @@
                     {
                         "label": "联动",
                         "url": "/linkpage",
+                        "icon": "fa fa-bolt",
                         "children": [
                             {
                                 "label": "地址栏变化自动更新",
@@ -368,6 +372,7 @@
                     {
                         "label": "事件动作机制",
                         "url": "/event-action",
+                        "icon": "fa fa-bullhorn",
                         "children": [
                             {
                                 "label": "地址栏变化自动更新",
@@ -485,6 +490,7 @@
                     {
                         "label": "动态加载",
                         "url": "/services",
+                        "icon": "fa fa-magic",
                         "children": [
                             {
                                 "label": "动态加载数据",
@@ -506,61 +512,73 @@
                     {
                         "label": "主题编辑器",
                         "url": "/theme",
+                        "icon": "fa fa-glasses",
                         "schemaApi": "get:/pages/theme-theme.json"
                     },
                     {
                         "label": "向导",
                         "url": "/wizard",
+                        "icon": "fa fa-desktop",
                         "schemaApi": "get:/pages/wizard-wizard.json"
                     },
                     {
                         "label": "排版",
                         "url": "/horizontal",
+                        "icon": "fa fa-columns",
                         "schemaApi": "get:/pages/horizontal-horizontal.json"
                     },
                     {
                         "label": "图表",
                         "url": "/chart",
+                        "icon": "fa fa-bar-chart",
                         "schemaApi": "get:/pages/chart-chart.json"
                     },
                     {
                         "label": "ECharts编辑器",
                         "url": "/echarts",
+                        "icon": "fa fa-bar-chart",
                         "schemaApi": "get:/pages/echarts-echarts.json"
                     },
                     {
                         "label": "轮播图",
                         "url": "/carousel",
+                        "icon": "fa fa-bar-pause",
                         "schemaApi": "get:/pages/carousel-carousel.json"
                     },
                     {
                         "label": "音频",
                         "url": "/audio",
+                        "icon": "fa fa-volume-up",
                         "schemaApi": "get:/pages/audio-audio.json"
                     },
                     {
                         "label": "视频",
                         "url": "/video",
+                        "icon": "fa fa-video-camera",
                         "schemaApi": "get:/pages/video-video.json"
                     },
                     {
                         "label": "异步任务",
                         "url": "/task",
+                        "icon": "fa fa-tasks",
                         "schemaApi": "get:/pages/task-task.json"
                     },
                     {
                         "label": "IFrame",
                         "url": "/iframe",
+                        "icon": "fa fa-cloud",
                         "schemaApi": "get:/pages/iframe-iframe.json"
                     },
                     {
                         "label": "SDK",
                         "url": "/sdk",
+                        "icon": "fa fa-rocket",
                         "schemaApi": "get:/pages/sdk-sdk.json"
                     },
                     {
                         "label": "App多页应用",
                         "url": "/audio",
+                        "icon": "fa fa-cubes",
                         "schemaApi": "get:/pages/audio-audio.json"
                     }
                 ]
