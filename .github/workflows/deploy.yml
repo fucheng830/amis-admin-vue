@@ -66,6 +66,7 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
           GITHUB_TOKEN: ${{ secrets.ACTION_SECRET }}
+    needs: sync
   build:
     name: build 🚀
     runs-on: ubuntu-latest
@@ -95,7 +96,7 @@ jobs:
       - name: Pnpm script 🚀
         run: |
           pnpm build
-    needs: sync
+    needs: pages
   deploy:
     name: deploy 🚀
     runs-on: ubuntu-latest
