@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "proxy": "node api/proxy.js"
   },
   "dependencies": {
     "amis": "^1.9.0",
@@ -21,16 +22,17 @@
     "vuera": "^0.2.7"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.10.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "http-proxy-middleware": "^2.0.6",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.6.11",
-    "@popperjs/core": "^2.10.2",
     "webpack": "4.46.0"
   },
   "eslintConfig": {
