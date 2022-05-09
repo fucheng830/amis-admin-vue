@@ -4,7 +4,7 @@
         {
             "type": "iframe",
             "className": "b-a",
-            "src": "https://aisuda.bce.baidu.com/amis/zh-CN/components/page",
+            "src": "https://amis-edit.vercel.app/",
             "height": "90vh"
         }
     ]
