@@ -1,20 +1,43 @@
 {
   "name": "amis-admin-vue",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "proxy": "node api/proxy.js"
+    "lint": "eslint --ext .js --fix&&vue-cli-service lint",
+    "proxy": "node api/proxy.js",
+    "prepare": "husky install",
+    "lint:style": "stylelint **/*.{vue,scss} --fix",
+    "commit": "git-cz"
+  },
+  "author": "h7ml <h7ml@qq.com>",
+  "keywords": [
+    "vue",
+    "amis",
+    "amis-admin-vue",
+    "renderer",
+    "json",
+    "schema"
+  ],
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h7ml/amis-admin-vue.git"
   },
   "dependencies": {
-    "amis": "^1.9.0",
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "amis": "latest",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "copy-to-clipboard": "3.3.1",
     "core-js": "^3.22.4",
-    "@fortawesome/fontawesome-free": "^6.1.1",
     "qs": "6.10.3",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -24,24 +47,53 @@
     "vuex-persistedstate": "^2.4.2"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^15.0.0",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.2",
     "@popperjs/core": "^2.10.2",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
     "babel-eslint": "^10.1.0",
     "element-ui": "^2.15.8",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^7.32.0",
     "http-proxy-middleware": "^2.0.6",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.6.11",
-    "webpack": "4.46.0"
+    "webpack": "4.46.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.5.0",
+    "compression-webpack-plugin": "^6.1.1",
+    "webpackbar": "^5.0.0-3"
   },
+  "homepage": "https://amis-admin-vue.vercel.app",
   "eslintConfig": {
     "root": true,
     "env": {
       "node": true
+    },
+    "engines": {
+      "node": ">= 12.0.0",
+      "npm": ">= 3.0.0"
     },
     "extends": [
       "plugin:vue/essential",
@@ -52,9 +104,17 @@
     },
     "rules": {}
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
 }
