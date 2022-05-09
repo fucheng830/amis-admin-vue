@@ -13,7 +13,7 @@ export default {
         return {
             schema: {
                 type: 'app',
-                brandName: 'Admin',
+                brandName: 'amis-admin-vue',
                 logo: '/logo.png',
                 header: {
                     type: 'tpl',

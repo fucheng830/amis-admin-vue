@@ -3,6 +3,9 @@
 </template>
 
 <script>
+import "amis/lib/themes/default.css";
+import "amis/lib/themes/antd.css";
+import "amis/lib/themes/cxd.css";
 import { render as renderSchema } from "amis";
 import copy from "copy-to-clipboard";
 import ReactDOM from "react-dom";
@@ -24,7 +27,7 @@ export default {
   },
   data() {
     return {
-      theme: "default",
+      theme: "antd",
     };
   },
 
@@ -45,7 +48,9 @@ export default {
 
   methods: {
     initEnv() {
+      window.enableAMISDebug = true
       this.env = {
+        enableAMISDebug: true,
         session: "global",
         updateLocation: this.updateLocation || this.updateRoute,
         isCurrentUrl: (to) => {
