@@ -1,8 +1,8 @@
 const config = {
   webpackBarName: 'amis-admin-vue',
-  productionGzipExtensions: ['html', 'js', 'css', 'svg'],
   webpackBanner: ' build: amis-admin-vue \n copyright: h7ml (h7ml@qq.com)'
 }
+const productionGzipExtensions = ['html', 'js', 'css', 'svg']
 const path = require('path')
 const WebpackBar = require('webpackbar')
 const resolve = dir => {
@@ -76,9 +76,7 @@ module.exports = {
         {
           filename: '[path][base].gz[query]',
           algorithm: 'gzip',
-          test: new RegExp(
-            '\\.(' + config.productionGzipExtensions.join('|') + ')$'
-          ),
+          test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
           threshold: 8192,
           minRatio: 0.8
         }
