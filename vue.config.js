@@ -57,6 +57,21 @@ module.exports = {
       }
     }
   },
+  pwa: {
+    workboxOptions: {
+      skipWaiting: true,
+      clientsClaim: true
+    },
+    themeColor: '#ffffff',
+    msTileColor: '#ffffff',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: 'black',
+    manifestOptions: {
+      name: 'amis-admin-vue',
+      short_name: 'amis-admin-vue',
+      background_color: '#ffffff'
+    }
+  },
   chainWebpack(config) {
     const rule = config.module.rule('js')
 

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'amis/lib/helper.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+require('./registerServiceWorker')
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 import store from './store'
