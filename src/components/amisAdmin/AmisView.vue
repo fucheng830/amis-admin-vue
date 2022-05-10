@@ -28,6 +28,11 @@ export default {
         api: '/pages/site.json'
       }
     }
+  },
+  created() {
+    const { host, origin } = location
+    if (host.includes('gitee') || host.includes('github'))
+      this.schema.api = origin + '/amis-admin-vue/pages/site.json'
   }
 }
 </script>
@@ -47,8 +52,8 @@ export default {
   text-align: center;
   position: relative;
   overflow: hidden;
-  color: var(--Layout-asideLink-iconColor);
-  font-size: var(--Layout-asideLink-onHover-iconSize);
+  /*color: var(--Layout-asideLink-iconColor);*/
+  /*font-size: var(--Layout-asideLink-onHover-iconSize);*/
 }
 .w-full {
   height: 50px;
