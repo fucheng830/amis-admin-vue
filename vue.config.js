@@ -2,7 +2,23 @@ const config = {
   webpackBarName: 'amis-admin-vue',
   webpackBanner: ' build: amis-admin-vue \n copyright: h7ml (h7ml@qq.com)'
 }
-const productionGzipExtensions = ['html', 'js', 'css', 'svg']
+const productionGzipExtensions = [
+  'html',
+  'js',
+  'css',
+  'svg',
+  'ttf',
+  'woff',
+  'woff2',
+  'eot',
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'ico',
+  'webp',
+  'json'
+]
 const path = require('path')
 const WebpackBar = require('webpackbar')
 const resolve = dir => {
@@ -34,31 +50,35 @@ module.exports = {
         new WebpackBar({
           name: config.webpackBarName
         })
-      ]
+      ],
+      output: {
+        filename: `output/assets/js/amis.[name].js`,
+        chunkFilename: `output/assets/js/amis.[name].js`
+      }
     }
   },
   chainWebpack(config) {
-    // const rule = config.module.rule('js')
+    const rule = config.module.rule('js')
 
-    // // 清理自带的 babel-loader
-    // rule.uses.clear()
-    //
-    // // 添加 esbuild-loader
-    // rule
-    //   .use('esbuild-loader')
-    //   .loader('esbuild-loader')
-    //   .options({
-    //     loader: 'ts', // 如果使用了 ts, 或者 vue 的 class 装饰器，则需要加上这个 option 配置， 否则会报错：ERROR: Unexpected "@"
-    //     target: 'es2015',
-    //     tsconfigRaw: require('./tsconfig.json')
-    //   })
-    // // 删除底层 terser, 换用 esbuild-minimize-plugin
-    // config.optimization.minimizers.delete('terser')
-    //
-    // // 使用 esbuild 优化 css 压缩
-    // config.optimization
-    //   .minimizer('esbuild')
-    //   .use(ESBuildMinifyPlugin, [{ minify: true, css: true }])
+    // 清理自带的 babel-loader
+    rule.uses.clear()
+
+    // 添加 esbuild-loader
+    rule
+      .use('esbuild-loader')
+      .loader('esbuild-loader')
+      .options({
+        loader: 'ts', // 如果使用了 ts, 或者 vue 的 class 装饰器，则需要加上这个 option 配置， 否则会报错：ERROR: Unexpected "@"
+        target: 'es2015',
+        tsconfigRaw: require('./tsconfig.json')
+      })
+    // 删除底层 terser, 换用 esbuild-minimize-plugin
+    config.optimization.minimizers.delete('terser')
+
+    // 使用 esbuild 优化 css 压缩
+    config.optimization
+      .minimizer('esbuild')
+      .use(ESBuildMinifyPlugin, [{ minify: true, css: true }])
 
     config.resolve.symlinks(true)
     config.when(process.env.NODE_ENV === 'development', config => {
@@ -108,5 +128,13 @@ module.exports = {
     })
   },
   runtimeCompiler: true,
-  productionSourceMap: false
+  productionSourceMap: false,
+  css: {
+    requireModuleExtension: true,
+    sourceMap: true,
+    extract: {
+      filename: `output/assets/css/amis.[name].css`,
+      chunkFilename: `output/assets/css/amis.[name].css`
+    }
+  }
 }
