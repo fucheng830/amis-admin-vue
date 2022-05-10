@@ -54,8 +54,7 @@ jobs:
           run_install: true
       - name: Pnpm script 🚀
         run: |
-          rm -rf vue.config.js public/pages/site.json
-          mv public/pages/router.json public/pages/site.json
+          rm -rf vue.config.js
           wget https://raw.staticdn.net/h7ml/amis-admin-vue/17bc54a0ec1303e47fb023cc9faaac6d4b3cec27/vue.config.js
           pnpm build
         # 构建发布 Github pages
@@ -135,20 +134,20 @@ jobs:
 ##          commit-message: "deploy: :rocket: ${{ github.repository }}@${{ github.sha }}"
 #          folder: dist
 #          token: ${{ secrets.ACCESS_TOKEN }}
-#      - name: Deploy to Netlify  🚀
-#        uses: nwtgck/actions-netlify@v1.2
-#        with:
-#          publish-dir: './dist'
-#          production-branch: master
-#          github-token: ${{ secrets.GIT_TOKEN }}
-#          deploy-message: "Deploy from GitHub Actions"
-#          enable-pull-request-comment: false
-#          enable-commit-comment: true
-#          netlify-config-path: './dist/netlify.toml'
-#          overwrites-pull-request-comment: false
-#        env:
-#          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-#          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: Deploy to Netlify  🚀
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './dist'
+          production-branch: master
+          github-token: ${{ secrets.GIT_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          netlify-config-path: './dist/netlify.toml'
+          overwrites-pull-request-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       - name: Deploy to surge 🚀
         uses: dswistowski/surge-sh-action@v1
         with:

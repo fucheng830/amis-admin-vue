@@ -32,7 +32,7 @@ export default {
   created() {
     const { host, origin } = location
     if (host.includes('gitee') || host.includes('github'))
-      this.schema.api = origin + '/amis-admin-vue/pages/site.json'
+      this.schema.api = origin + '/amis-admin-vue/pages/host.json'
   }
 }
 </script>
