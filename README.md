@@ -2,15 +2,17 @@
 
 <div align="center">
 
-![build](https://img.shields.io/github/workflow/status/h7ml/amis-admin-vue/deploy/master?style=plastic)
-![license](https://img.shields.io/github/license/h7ml/amis-admin-vue.svg)
-![version](https://img.shields.io/npm/v/amis/latest)
-![language](https://img.shields.io/github/languages/top/h7ml/amis-admin-vue)
-![last](https://img.shields.io/github/last-commit/h7ml/amis-admin-vue.svg)
-
+[![deploy](https://github.com/h7ml/amis-admin-vue/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/h7ml/amis-admin-vue/actions/workflows/deploy.yml)
+[![license](https://img.shields.io/github/license/h7ml/amis-admin-vue.svg)](https://github.com/h7ml/amis-admin-vue/blob/master/LICENSE#L1)
+[![version](https://img.shields.io/npm/v/amis/latest)](https://github.com/h7ml/amis-admin-vue/blob/master/package.json#L36)
+[![language](https://img.shields.io/github/languages/top/h7ml/amis-admin-vue)](https://github.com/h7ml/amis-admin-vue/search?l=css)
+[![last](https://img.shields.io/github/last-commit/h7ml/amis-admin-vue.svg)](https://github.com/h7ml/amis-admin-vue/commits)
+[![stars](https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&logo=Vercel)](https://amis.vercel.app/)
 </div>
-基于 [amis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
+
+基于[amis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
 这是基于官方应用模板[amis-admin](https://github.com/aisuda/amis-admin)的vue实现版本。
+支持最新版本的[amis](https://github.com/h7ml/amis-admin-vue/blob/master/package.json#L3)。
 
 ## Project setup
 

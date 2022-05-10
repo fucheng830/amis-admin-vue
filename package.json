@@ -63,7 +63,6 @@
     "commitlint-config-cz": "^0.13.2",
     "compression-webpack-plugin": "^6.1.1",
     "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^6.3.0",
     "element-ui": "^2.15.8",
     "esbuild-loader": "^2.18.0",
     "eslint": "^7.32.0",
@@ -118,7 +117,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
+      "path": "cz-conventional-changelog"
     }
   }
 }
