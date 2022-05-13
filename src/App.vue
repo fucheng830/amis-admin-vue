@@ -28,6 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
 .app-wrapper {
   position: relative;
   width: 100%;

@@ -51,6 +51,19 @@ module.exports = {
           name: config.webpackBarName
         })
       ],
+      externals: {
+        vue: 'Vue',
+        axios: 'Axios',
+        'element-ui': 'ELEMENT',
+        bootstrap: 'Bootstrap',
+        'copy-to-clipboard': 'CopyToClipboard',
+        qs: 'Qs',
+        react: 'React',
+        'react-dom': 'ReactDOM',
+        // vuera: 'Vuera',
+        vuex: 'Vuex',
+        'vuex-persistedstate': 'VuexPersistedstate'
+      },
       output: {
         filename: `output/assets/js/amis.[name].js`,
         chunkFilename: `output/assets/js/amis.[name].js`

@@ -7,11 +7,12 @@
 // import "amis/lib/themes/antd.css";
 // import "amis/lib/themes/cxd.css";
 import { render as renderSchema } from 'amis'
-import copy from 'copy-to-clipboard'
-import ReactDOM from 'react-dom'
-import * as qs from 'qs'
+// import copy from 'copy-to-clipboard'
+// import ReactDOM from 'react-dom'
+// import * as qs from 'qs'
+const qs = window.qs
 import { toast, alert, confirm } from 'amis'
-import axios from 'axios'
+// import axios from 'axios'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -45,6 +46,7 @@ export default {
   mounted() {
     console.error(this.theme)
     this.initEnv()
+    // eslint-disable-next-line no-undef
     ReactDOM.render(
       renderSchema(
         this.schema,
@@ -95,6 +97,7 @@ export default {
           config.withCredentials = true
 
           if (config.cancelExecutor) {
+            // eslint-disable-next-line no-undef
             config.cancelToken = new axios.CancelToken(config.cancelExecutor)
           }
 
@@ -119,8 +122,10 @@ export default {
 
           data && (config.data = data)
 
+          // eslint-disable-next-line no-undef
           return axios(url, config)
         },
+        // eslint-disable-next-line no-undef
         isCancel: e => axios.isCancel(e),
         alert,
         notify: (type, msg) => {
@@ -136,8 +141,9 @@ export default {
           console.log('[notify]', type, msg, toast)
         },
         confirm,
-        copy: (contents, options = {}) => {
-          const ret = copy(contents, options)
+        copyToClipboard: (contents, options = {}) => {
+          // eslint-disable-next-line no-undef
+          const ret = copyToClipboard(contents, options)
           ret &&
             (!options || options.shutup !== true) &&
             toast.info('内容已拷贝到剪切板')
