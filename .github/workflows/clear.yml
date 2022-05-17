@@ -1,4 +1,4 @@
-name: claer
+name: clear
 on:
   workflow_dispatch:
 env:
