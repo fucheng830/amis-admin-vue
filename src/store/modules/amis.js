@@ -23,6 +23,7 @@ const mutations = {
     state.editor.isPreview = Preview
   },
   changeTheme(state, theme) {
+    import (`amis/lib/themes/${theme}.css`)
     state.editor.theme = theme
   },
   setComponent(state, component) {

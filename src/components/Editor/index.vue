@@ -16,7 +16,6 @@
 import 'font-awesome/css/font-awesome.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'amis-editor/dist/style.css'
-import 'amis/lib/themes/cxd.css'
 import 'amis/lib/helper.css'
 import 'amis/sdk/iconfont.css'
 import 'amis/lib/themes/antd.css'
