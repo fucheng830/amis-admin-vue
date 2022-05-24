@@ -15,6 +15,7 @@ import axios from 'axios'
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'Amis',
   props: {
     schema: {
       type: Object,

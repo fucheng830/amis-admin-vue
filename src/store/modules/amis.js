@@ -1,14 +1,19 @@
 const state = () => ({
   config: {},
   enableAMISDebug: false,
-  theme: 'default'
+  theme: 'default',
+  component: 'AmisView'
 })
 const getters = {
   config: state => state.config,
   theme: state => state.theme,
+  component: state => state.component,
   enableAMISDebug: state => state.enableAMISDebug
 }
 const mutations = {
+  setComponent(state, component) {
+    state.component = component
+  },
   setTheme(state, theme) {
     state.theme = theme
   },
@@ -20,6 +25,9 @@ const mutations = {
   }
 }
 const actions = {
+  setComponent(state, component) {
+    state.commit('setComponent', component)
+  },
   setTheme(state, theme) {
     state.commit('setTheme', theme)
   },

@@ -1,13 +1,21 @@
 <template>
-  <AMisRenderer :schema="schema" />
+  <body>
+    <amis :schema="schema" />
+    <Toast key="toast" position="top-right" theme="default" />
+    <Alert key="alert" theme="default" />
+  </body>
 </template>
 
 <script>
-import AMisRenderer from '@/components/amis/AMisRenderer.vue'
+import amis from '@/components/Amis/index.vue'
+import { ReactInVue } from 'vuera'
+import { ToastComponent, AlertComponent } from 'amis'
 export default {
-  name: 'AmisView',
+  name: 'View',
   components: {
-    AMisRenderer
+    amis,
+    Toast: ReactInVue(ToastComponent),
+    Alert: ReactInVue(AlertComponent)
   },
   data() {
     return {

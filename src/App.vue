@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <AmisView />
-    <Toast key="toast" position="top-right" theme="default" />
-    <Alert key="alert" theme="default" />
+    <component :is="component" />
   </div>
 </template>
 
 <script>
-import AmisView from './components/amisAdmin/AmisView.vue'
-import { ReactInVue } from 'vuera'
-import { ToastComponent, AlertComponent } from 'amis'
+import AmisView from '@/components/View/index.vue'
+import AmisEditor from '@/components/Editor/index.vue'
 
+import { mapGetters } from 'vuex'
 export default {
   name: 'App',
   components: {
     AmisView,
-    Toast: ReactInVue(ToastComponent),
-    Alert: ReactInVue(AlertComponent)
+    AmisEditor
+  },
+  computed: {
+    ...mapGetters({
+      component: 'amis/component'
+    })
   }
 }
 </script>
@@ -28,6 +30,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
 .app-wrapper {
   position: relative;
   width: 100%;
