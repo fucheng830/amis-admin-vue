@@ -15,9 +15,9 @@
 支持最新版本的[amis](https://github.com/h7ml/amis-admin-vue/blob/master/package.json#L3)
 
 ## [项目预览](https://amis-admin-vue.vercel.app/index)
-[![stars](./public/img/markdown/preview.png)](https://amis.vercel.app/)
+[![preview](https://amis-admin-vue.vercel.app/img/markdown/preview.png)](https://amis-admin-vue.vercel.app/img/markdown/preview.png)
 ## [项目在线编辑器](https://amis-admin-vue.vercel.app/#/Editor)
-[![stars](./public/img/markdown/edit.png)](https://amis.vercel.app/#/Editor)
+[![edit](https://amis-admin-vue.vercel.app/img/markdown/edit.png)](https://amis-admin-vue.vercel.app/img/markdown/edit.png)
 ## Project setup
 
 ```
