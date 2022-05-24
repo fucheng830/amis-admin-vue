@@ -12,8 +12,12 @@
 
 基于[amis](https://github.com/baidu/amis) 渲染器，快速搭建自己的管理系统。
 这是基于官方应用模板[amis-admin](https://github.com/aisuda/amis-admin)的vue实现版本。
-支持最新版本的[amis](https://github.com/h7ml/amis-admin-vue/blob/master/package.json#L3)。
+支持最新版本的[amis](https://github.com/h7ml/amis-admin-vue/blob/master/package.json#L3)
 
+## [项目预览](https://amis-admin-vue.vercel.app/index)
+[![stars](./public/img/markdown/preview.png)](https://amis.vercel.app/)
+## [项目在线编辑器](https://amis-admin-vue.vercel.app/#/Editor)
+[![stars](./public/img/markdown/edit.png)](https://amis.vercel.app/#/Editor)
 ## Project setup
 
 ```

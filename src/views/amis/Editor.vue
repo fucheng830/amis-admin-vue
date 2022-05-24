@@ -38,9 +38,9 @@
                 PC端/移动端: {{ editor.isMobile?'移动端':'PC端' }}
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" @click="changeMobile(true)">true</a></li>
+                <li><a class="dropdown-item" @click="changeMobile(true)">PC端</a></li>
                 <li>
-                  <a class="dropdown-item" @click="changeMobile(false)">false</a>
+                  <a class="dropdown-item" @click="changeMobile(false)">移动端</a>
                 </li>
               </ul>
             </div>
@@ -57,10 +57,10 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" @click="changePreview(true)">true</a>
+                  <a class="dropdown-item" @click="changePreview(true)">预览</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" @click="changePreview(false)">false</a>
+                  <a class="dropdown-item" @click="changePreview(false)">编辑</a>
                 </li>
               </ul>
             </div>
