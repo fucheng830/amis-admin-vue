@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59e61084926f2a0f512a",
+    "revision": "3e232e78b7959a97cbe1",
     "url": "/amis-admin-vue/css/app.92161f7a.css"
   },
   {
@@ -132,12 +132,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/amis-admin-vue/img/iconfont.765e4a58.svg"
   },
   {
-    "revision": "03182dac0f09c462445ae60f5fcd26a4",
+    "revision": "08cec162675f3fe234b4f4e5d563936e",
+    "url": "/amis-admin-vue/img/markdown/edit.png"
+  },
+  {
+    "revision": "19676c973fc5371acfa78a4a87a6139a",
+    "url": "/amis-admin-vue/img/markdown/preview.png"
+  },
+  {
+    "revision": "bd3f0586792fe4a9fc7f0f3752349cb8",
     "url": "/amis-admin-vue/index.html"
   },
   {
-    "revision": "59e61084926f2a0f512a",
-    "url": "/amis-admin-vue/js/app.903c7408.js"
+    "revision": "3e232e78b7959a97cbe1",
+    "url": "/amis-admin-vue/js/app.9937058f.js"
   },
   {
     "revision": "bd57ba0ba081d9ba8a24",
