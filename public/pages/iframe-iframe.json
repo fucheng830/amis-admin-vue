@@ -4,7 +4,7 @@
         {
             "type": "iframe",
             "className": "b-a",
-            "src": "https://amis-edit.vercel.app/",
+            "src": "https://amis-admin-vue.vercel.app/index#/Editor",
             "height": "90vh"
         }
     ]
